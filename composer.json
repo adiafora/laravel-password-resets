@@ -1,0 +1,31 @@
+{
+  "name": "adiafora/laravel-password-resets",
+  "description": "The package allows you to reset the password using any field from the User table",
+  "keywords": ["laravel", "password resets"],
+  "type": "package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sergey Zhidkov",
+      "email": "zhidkoff@list.ru"
+    }
+  ],
+  "require": {
+    "php": ">=7.1"
+  },
+  "autoload": {
+    "classmap": [
+      "migrations"
+    ],
+    "psr-4": {
+      "Adiafora\\PasswordResets\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Adiafora\\PasswordResets\\PasswordResetsServiceProvider"
+      ]
+    }
+  }
+}
