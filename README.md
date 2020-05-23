@@ -16,6 +16,12 @@ For Laravel < 5.5 Add in ServiceProvider to the providers array in `config/app.p
     Adiafora\PasswordResets\PasswordResetsServiceProvider::class,
 ```
 
+Publish the configuration and migrations:
+
+```php
+    php artisan vendor:publish --provider="Adiafora\PasswordResets\PasswordResetsServiceProvider"
+```
+
 In the configuration file `config/password_resets.php`, enter the name of the field that will be used to reset the password:
 
 ```php
@@ -24,11 +30,9 @@ return [
 ];
 ```
 
-Publish the configuration and migrations:
 
-```php
-    php artisan vendor:publish --provider="Adiafora\PasswordResets\PasswordResetsServiceProvider"
-```
+> Please note! You may need to clear the configuration cache after this
+
 
 Finally, you'll also need to run migration on the package
 

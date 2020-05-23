@@ -2,7 +2,9 @@
 
 namespace Adiafora\PasswordResets;
 
-class PasswordResetsServiceProvider
+use Illuminate\Support\ServiceProvider;
+
+class PasswordResetsServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
@@ -13,11 +15,9 @@ class PasswordResetsServiceProvider
     {
         $this->publishes([
             __DIR__ . '/../config/password_resets.php' => config_path('password_resets.php'),
-        ], 'config');
+        ]);
 
-        $this->publishes([
-            __DIR__ . '/../migrations/' => database_path('migrations'),
-        ], 'migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../migrations/');
     }
 
     /**
