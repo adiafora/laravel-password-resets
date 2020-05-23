@@ -27,7 +27,7 @@ class PasswordResetsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('auth.password_my', function()
+        $this->app->bind('auth.password_resets', function()
         {
             return new \Adiafora\PasswordResets\Auth\PasswordBrokerManager($this->app);
         });

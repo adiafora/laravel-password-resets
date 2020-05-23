@@ -16,6 +16,6 @@ class PasswordFacade extends Password
      */
     protected static function getFacadeAccessor()
     {
-        return 'auth.password_my';
+        return 'auth.password_resets';
     }
 }
