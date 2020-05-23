@@ -16,7 +16,7 @@ For Laravel < 5.5 Add in ServiceProvider to the providers array in `config/app.p
     Adiafora\PasswordResets\PasswordResetsServiceProvider::class,
 ```
 
-Publish the configuration and migrations:
+Publish the configuration:
 
 ```php
     php artisan vendor:publish --provider="Adiafora\PasswordResets\PasswordResetsServiceProvider"
@@ -31,10 +31,10 @@ return [
 ```
 
 
-> Please note! You may need to clear the configuration cache after this
+> Please note! You may need to clear the config cache after this.
 
 
-Finally, you'll also need to run migration on the package
+Finally, you'll also need to run migration on the package:
 
 ```php
     php artisan migrate
