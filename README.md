@@ -45,6 +45,8 @@ Usage
 
 In your ResetPasswordController, simply replace  `Illuminate\Foundation\Auth\ResetsPasswords` trait with the `Adiafora\PasswordResets\Auth\ResetsPasswords` trait.
 
+And in your ForgotPasswordController, simply replace  `Illuminate\Foundation\Auth\SendsPasswordResetEmails` trait with the `Adiafora\PasswordResets\Auth\SendsPasswordResetEmails` trait.
+
 License
 -----------------------------------
 

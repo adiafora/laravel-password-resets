@@ -80,4 +80,19 @@ class DatabaseTokenRepository extends DatabaseTokenRepositoryParent
             ! $this->tokenExpired($record['created_at']) &&
             $this->hasher->check($token, $record['token']);
     }
+
+    /**
+     * Determine if the given user recently created a password reset token.
+     *
+     * @param  \Illuminate\Contracts\Auth\CanResetPassword  $user
+     * @return bool
+     */
+    public function recentlyCreatedToken(CanResetPasswordContract $user)
+    {
+        $record = (array) $this->getTable()->where(
+            config('password_resets.field'), $user->{config('password_resets.field')}
+        )->first();
+
+        return $record && $this->tokenRecentlyCreated($record['created_at']);
+    }
 }
