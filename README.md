@@ -3,6 +3,16 @@ Laravel. Reset a user's password using any field
 
 Laravel offers an easy way to reset a user's password. But by default, the required field for the user that identifies the user when the password is reset is the email field. This package allows you to reset a user's password using any field from the User table. This can be a phone number, username, or any other unique field from the User table.
 
+## :wrench: Supported Versions
+
+Versions will be supported for a limited amount of time.
+
+| Version | Laravel Version | Php Version | Support |
+|---- |----|----|----|
+| 1.0 | <=5.5 | ^7.0 | Unsupported since 15-5-2018 |
+| 2.0 | ^6.0 |  ^7.2|^8.0 | New features |
+
+
 Installation
 -----------------------------------
 
